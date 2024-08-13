@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras repetitivas</title>
+</head>
+<body>
+    <h1>Imprimiendo el contenido de un arreglo</h1>
+    
+    <script>
+        var opcion;
+    opcion = parseInt(prompt("Menu de Opciones \n 1.Para imprimir arreglo \n 2.Edad promedio \n 3.Imprimir conteo"))
+            while (opcion<1 || opcion>3)
+            {
+                opcion = parseInt(prompt("Menu de Opciones 1.Para imprimir arreglo \n 2.Edad promedio \n 3.Imprimir conteo"))
+            }
+
+        //ejercicio 1
+        if (opcion==1)
+        {
+            var edades = [10, 18, 60, 27];
+            document.write("Imprimiendo el contenido del arreglo")
+            for (let index = 0; index < edades.length; index++) {
+                document.writeln(edades[index], "-");
+            }
+        }
+        else if (opcion==2) {
+            var edades = [10, 18, 60, 27];
+            var suma = 0, promedio=0;
+            document.write("Utilizando acumuladores");
+            for(let index = 0; index <edades.length; index++) {
+            suma = suma + edades[index]
+            promedio = suma / edades.length
+                document.write("la edad promedio es " + promedio)
+        }
+        }
+
+        
+        
+        //ejercicio 3
+        else if (opcion==3) {
+            var edades = [10, 18, 60, 27];
+            var suma = 0, promedio = 0;
+            var mayor = 0, menor = 0;
+            document.write("Utilizando conteos")
+            for (let index = 0; index < edades.length; index++) {
+                if (edades[i] >= 18) {
+                    mayor++;
+                }
+                else {
+                    menor++;
+                }
+
+            }
+            document.write("La cantidad de edades menores a 18 son", menor, "<br>");
+            document.write("La cantidad de edades mayores a 18 son", mayor, "<br>");
+        }
+
+        //fin for
+              
+    </script>
+</body>
+</html>
